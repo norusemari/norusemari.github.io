@@ -1,17 +1,1 @@
----
-layout: compress
----
-
-[
-  {% for post in site.posts %}
-  {
-    "title": "{{ post.title | escape }}",
-    "url": "{{ site.baseurl }}{{ post.url }}",
-    "categories": "{{ post.categories | join: ', '}}",
-    "tags": "{{ post.tags | join: ', ' }}",
-    "date": "{{ post.date }}",
-    {% include no-linenos.html content=post.content %}
-    "snippet": "{{ content | strip_html | strip_newlines | remove_chars | escape | truncate: 300 | replace: '\', '\\\\' }}"
-  }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-]
+[ { "title": "깃 블로그 최초 셋팅 기록", "url": "/posts/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%B5%9C%EC%B4%88-%EC%84%A4%EC%A0%95/", "categories": "블로그 관리, 설정 기록", "tags": "chirpy, jekyll, theme, gitpage, blog", "date": "2020-12-11 22:00:00 +0900", "snippet": "2020년 3월의 어느날 깃허브 블로그를 만들고 싶다는 생각이 들었다.그런데 욕심만 앞서서 인지 보름 정도 깃 공부만 하다가 테마 설정이 어려워서 그만둬 버렸다.대략 8개월이 지난 최근 갑자기 다시 블로그를 만들어 보고 싶다는 생각이 들었다.퇴근 후에 잠깐 시간을 내어 삼사일 쯤 만지다 보니 어느세 블로그 테마 설정 완료.시행착오가 많아서 다 기억이 나진 않지만, 미래의 나를 위해 기록해 둔다.과거의 나와 지금의 나는 크게 달라진게 없는데.. 그때는 왜 포기했을까 :)?1. Github 사용방법 이지스 퍼블리싱에서 출판한 D..." } ]
