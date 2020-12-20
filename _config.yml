@@ -3,13 +3,14 @@
 # https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT licensed
-
+ 
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-#--------------------------
-title: Chirpy                          # the main title
+# --------------------------
+title: Noru                          # the main title
 
-tagline: A text-focused Jekyll theme.  # it will display as the sub-title
+### 나중에 할말 생기면 적자. 2020.12.10 by noru
+#tagline: A text-focused Jekyll theme.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -17,31 +18,31 @@ description: >-                        # used by seo meta and the atom feed
   and focuses on text presentation.
 
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://norusemari.github.io'
 
-author: your_full_name                  # change to your full name
+author: norusemari                  # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+avatar: /assets/img/sample/noru.png   # support internet resources
 
 github:
-  username: github_username             # change to your github username
+  username: norusemari             # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+#twitter:
+#  username: twitter_username            # change to your twitter username
 
 social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
-  email: example@doamin.com             # change to your email address
+  name: norusemari                  # it will shows as the copyright owner in Footer
+  email: norusemari@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+#    - https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/norusemari       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
 google_site_verification: google_meta_tag_verification # change to your verification string
-#--------------------------
+# --------------------------
 
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
@@ -49,7 +50,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Asia/Seoul
 
 google_analytics:
   id: ''          # Fill with your Google Analytics ID
@@ -67,31 +68,29 @@ disqus:
   shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 
-# Prefer color scheme setting, available values:
+# Prefer color scheme setting.
 #
-#     dual   - Follow the system prefer color by default, and a toggle will display
-#              in the left bottom of Sidebar, which used for switch the theme between dark and light.
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
 #
 #     light  - Use the light color scheme
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dual
+theme_mode:   # <light|dark>
 
 # boolean type, the global switch for ToC in posts.
 toc: true
 
 paginate: 10
 
-markdown: kramdown
-
-highlighter: rouge
-
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: 'highlight'
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
     # default_lang: console
     span:
       line_numbers: false
@@ -196,5 +195,5 @@ jekyll-archives:
     category: category
     tag: tag
   permalinks:
-    tag: '/tags/:name/'
-    category: '/categories/:name/'
+    tag: /tags/:name/
+    category: /categories/:name/
