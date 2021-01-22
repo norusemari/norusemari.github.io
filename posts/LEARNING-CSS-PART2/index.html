@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="theme" content="Chirpy v2.6.2"><meta name="generator" content="Jekyll v4.1.1" /><meta property="og:title" content="Learning CSS - part.2" /><meta name="author" content="norusemari" /><meta property="og:locale" content="en_US" /><meta name="description" content="3.10 Flexbox Part One" /><meta property="og:description" content="3.10 Flexbox Part One" /><link rel="canonical" href="http://localhost:4000/posts/LEARNING-CSS-PART2/" /><meta property="og:url" content="http://localhost:4000/posts/LEARNING-CSS-PART2/" /><meta property="og:site_name" content="Noru" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-01-12T21:30:00+09:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Learning CSS - part.2" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/LEARNING-CSS-PART2/"},"url":"http://localhost:4000/posts/LEARNING-CSS-PART2/","headline":"Learning CSS - part.2","datePublished":"2021-01-12T21:30:00+09:00","dateModified":"2021-01-22T23:31:17+09:00","description":"3.10 Flexbox Part One","author":{"@type":"Person","name":"norusemari"},"@type":"BlogPosting","@context":"https://schema.org"}</script><title>Learning CSS - part.2 | Noru</title><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" href="/assets/css/post.css" as="style"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="/assets/js/post.min.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/sample/noru.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">Noru</a></div><div class="site-subtitle font-italic"></div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <span id="mode-toggle-wrapper"> <i class="mode-toggle fas fa-adjust"></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.mode != null) { if (this.mode == ModeToggle.DARK_MODE) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.mode != null) { if (self.mode == ModeToggle.DARK_MODE) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span> <span class="icon-border"></span> <a href="https://github.com/norusemari" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['norusemari','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Learning CSS - part.2</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Learning CSS - part.2</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Tue, Jan 12, 2021, 9:30 PM +0900" > Jan 12 <i class="unloaded">2021-01-12T21:30:00+09:00</i> </span> by <span class="author"> norusemari </span></div><div> Updated <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Fri, Jan 22, 2021, 11:31 PM +0900" > Jan 22 <i class="unloaded">2021-01-22T23:31:17+09:00</i> </span></div></div><div class="post-content"><h1 id="310-flexbox-part-one">3.10 Flexbox Part One</h1><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 100vh; /*viewpoint height:화면에 맞춰 바뀐다, 100vh:화면높이의 100%*/
+        margin: 20px;
+        display: flex; /*body가 flex container가 된다.*/
+        /*justify-content: center;*/
+        /*justify-content: space-evenly;*/
+        justify-content: space-around;
+        align-items: center;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+      }
+      #second {
+        background-color: wheat;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div id="second"&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-10강의화면2" /></p><p>flexbox는 box를 화면의 어느위치에나 둘 수있다는 장점이 있지만 지켜야 하는 몇가지 규칙이 있다.</p><ul><li>그 중 규칙 하나, <strong>flex 설정은 부모 엘리먼트에만 적어야함.</strong> 자식 엘먼트에는 어떤 것도 적지 말아야 한다.<ul><li>위의 코드 기준, div의 <strong>부모인 body를 display:felx;</strong> 로 지정한다.</ul><li>flexbox main axis(주축 - 수평축), cross axis(교차축 - 수직축). 교차축은 기본적으로 수직축인데, 교차축과 수직축은 <strong>flex-direction</strong> 으로 바꿔줄 수 있다.<br /> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-10강의화면1" /><ul><li>justyfiy-content는 주축(main axis)에 적용<li>align-items는 교축(cross asxis)에 적용</ul></ul><p>위의 코드에서 body가 div의 부모 역할을 하고 있는데, body의 높이가 div들을 배치한 높이와 같다면(이미 div가 body의 수직 중심축에 있다면) align-items: center; 명령어를 입력해도 화면상 바뀌는게 없어 보인다. 이런경우 body에 height를 충분히 설정해줘서 테스트 해보면 align-items: center; 명령이 수행된 것을 알 수 있다.</p><p>body의 heigth를 설정할때 px가 아니나 vh를 사용했는데 이는 사용자가 웹페이지에 접근할때 사용되는 기기의 화면 크기에 맞춰 사이즈가 조정되는 단위이다. 100vh는 내가 사용하고 있는 화면 높이의 100%에 해당한다.</p><h1 id="311-flexbox-part-two">3.11 Flexbox Part Two</h1><p>위에서 잠시 언급했듯이 <strong>fix-direction: column;</strong> 코드를 사용하면 기존에 주축과 교차축의 기준을 바꿀 수 있다. 즉 기존 주축이 현재 교차축 방향이 되고 기존 교차축이 현재 주축 방향이 되는거다.</p><ul><li><strong>fix-direction: row;</strong> 가 default 이다.</ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 100vh; /*viewpoint height:화면에 맞춰 바뀐다, 100vh:화면높이의 100%*/
+        margin: 20px;
+        display: flex; /*body가 flex container가 된다.*/
+        flex-direction: column; /*default는 row이다. 이렇게하면 수평/수직축이 바뀜*/
+        /*flex-direction: column-reverse;*/
+        justify-content: space-around; /*따라서 수평이었던 주축에 적용되던게, 수직인 주축에 적용됨*/
+        align-items: flex-end;
+      }
+      div {
+        width: 250px;
+        height: 250px;
+        background-color: teal;
+      }
+      #second {
+        background-color: wheat;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div id="second"&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-11강의화면1" /></p><p><strong>flex-direction: ;</strong> 를 통해 축의 방향을 바꿀 수 있는데 default는 row이고 그밖에도 row-reverse, column, column-reverse 등이 있으며 이에대한 설명은 해당 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/flex-direction">링크</a> 참고!</p><p><br /></p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"kr"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Home - my first website<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+      <span class="nt">body</span> <span class="p">{</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span> <span class="c">/*viewpoint height:화면에 맞춰 바뀐다, 100vh:화면높이의 100%*/</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span> <span class="c">/*body가 flex container가 된다.*/</span>
+        <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-between</span><span class="p">;</span>
+        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row-reverse</span><span class="p">;</span>
+        <span class="c">/*flex-wrap: nowrap;*/</span> <span class="c">/*화면을 줄여도 크기에 맞춰 너비가 줄어듬*/</span>
+        <span class="c">/*flex-wrap: wrap; 화면이 줄면 거기에 맞춰 컨텐츠를 아래로 내림*/</span>
+        <span class="nl">flex-wrap</span><span class="p">:</span> <span class="n">wrap-reverse</span><span class="p">;</span> <span class="c">/*화면이 줄어들때 컨텐츠 움직이는 순서가 바뀜*/</span>
+      <span class="p">}</span>
+
+      <span class="nt">div</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="no">teal</span><span class="p">;</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span> <span class="c">/*이렇게 div를 flex container로 만들면 div안의 텍스트가 자식이 되어 적용받는다.*/</span>
+        <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="n">rebeccapurple</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nf">#second</span> <span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="no">wheat</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"second"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></table></code></div></div><p>여기서는 <strong>flex-wrap: ;</strong> 를 주의깊게 살펴보자, 화면이 줄어듬에 따라서 최초에 설정해둔 크기(div 의 크기 width)에 상관없이 컨텐츠를 줄어들게 할건지, 아니면 공간이 모자라면 컨텐츠를 아래로 내릴건지를 설정해주는 코드 이다.</p><p>위와같이 flex-wrap는 flex-direction과 함께 쓸수 있으며, 아래 이미지를 통해 화면 사이즈가 줄어듬에 따라 어떻게 컨텐츠가 움직이는지 확인해 볼 수 있다.</p><ul><li>flex-wrap에 대한 설정은 해당 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/flex-wrap">링크</a> 확인!</ul><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-11강의화면2" /> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-11강의화면3" /></p><p><strong>flexbox는 더 많은 property가 있으나 우선은 여기까지!</strong></p><h1 id="312-position--fixed">3.12 Position : Fixed</h1><p>position은 레이아웃보다 위치를 원하는 곳으로 위로, 옆으로 옮기고 싶을때 사용</p><ul><li><strong>position: fixed;</strong> 는 스크롤 해도 항상 지정된 위치에 머무르게 하며<li>다른 레이아웃에 상관없이 항상 가장 위에 위치하게 된다.<li>top, left, right, bottom 으로 original position로부터 위치 조정 가능</ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 20px;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+      }
+      #different {
+        position: fixed; /*기존에 레이아웃에 상관없이 지정된 위치에 고정 &amp; 제일 위로 노출*/
+        top: 100px; /*웹페이지에서 위에서 100px 아래 위치*/
+        left: 200px; /*웹페이지에서 왼쪽에서 200px 떨어져서 위치*/
+        background-color: wheat;
+        width: 350px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div id="different"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-12강의화면1" /></p><p><strong>position: fixed;</strong> 를 통해 스크롤을 위아래로 움직여도 지정한 위치에 고정되어있는 div 박스를 확인할 수 있다.</p><h1 id="313-position--relative--absolute">3.13 Position : Relative &amp; Absolute</h1><p><strong>position : relative;</strong> 는 처음 위치를 기준으로 top, left, right, bottom 설정에 맞춰 위치를 조정한다. 아래 예시는 div 안에 div가 있을 경우, div를 감싸고 있는 div가 안에 있는 div의 처음 위치가 되는 개념!</p><ul><li><strong>CSS position</strong>에 대한 추가 설명은 <a href="http://designbase.co.kr/webcoding-12/">링크</a> 참고!</ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000px;
+        margin: 50px;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: wheat;
+      }
+      .green {
+        background-color: teal;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: -10px;
+        left: -10px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div class="green"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-13강의화면1" /></p><p><br /></p><p><strong>position: absolute;</strong> 는 position: relative; 인 부모를 기준으로 위치가 조정된다.</p><ul><li>지정된 relative 포지션의 부모가 없으면 가장 가까운 부모중에 relative 포지션을 찾아서 기준으로 삼는다<li>아래 코드는 부모 div에 대한 postion이 static 이므로 더 상위 부모로 올라가서 body를 기준으로 삼음<li>포지션을 지정하지 않을 경우 position: static; 이 기본 설정이다.</ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000px;
+        margin: 50px;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: wheat;
+      }
+      .green {
+        background-color: teal;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+        right: 0px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div class="green"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-13강의화면2" /></p><p>만약 위의 결과와 달리 body가 아니라 감싸고 있는 div를 기준으로 안쪽에 있는 div 위치를 옮기고 싶으면, 감싸고 있는 div 즉 부모 박스에 <strong>position: relative;</strong> 코드를 더해주면 아래와 같이 결과가 바뀐다.</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-13강의화면3" /></p><h1 id="314-pseudo-selector-part-one">3.14 Pseudo Selector Part One</h1><p><strong>pseudo selector</strong> : 엘리먼트를 좀 더 세부적으로 선택해주는것을 뜻함.</p><ul><li>예를들어 span 다음에 오는 클래스를 선택하고 싶거나<li>처음이나 마지막에 있는 클래스만 선택하고 싶은 경우 사용 가능!<li><strong>이 방법이 일일이 id나 class를 지정해 주는것 보다 직관적일 수 있다.</strong></ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: wheat;
+      }
+      div:first-child {
+        background-color: tomato;
+      }
+      div:last-child {
+        /*last-child : 리스트에 있는 div들 중 마지막을 뜻함*/
+        background-color: teal;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-14강의화면1" /> <br /></p><p>앞에서 배운 <strong>first-child</strong>, <strong>last-child</strong> 외에도 <strong>nth-child()</strong>를 사용한 방법도 있다.</p><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        background-color: tomato;
+      }
+      /*
+      span:nth-child(2),
+      span:nth-child(4),
+      span:nth-child(6),
+      .. 이렇게 하는것보다 even으로 짝수만 지정해주는게 현명!
+      홀수만 선택하고 싶으면 span:nth-child(odd)
+      */
+      /*
+      span:nth-child(3n+1)
+      이렇게하면 1,4,7,10,.. 순서에 해당하는 자식들이 해당됨
+      */
+      span:nth-child(even) {
+        background-color: teal;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+    &lt;span&gt;hello&lt;/span&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul><li>nth-child() 사용시 even, odd, n3 + 1 등 다양한 방법으로 내가 원하는 엘리먼트를 선택 가능!</ul><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="3-14강의화면2" /></p><h1 id="315-combinators">3.15 Combinators</h1><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      p span {
+        /*div p sapn 을써도 된다 = 원하는 만큼 부모를 앞에 나열해줘도 된다.*/
+        /*p를 부모로가진 자식 span의 글자색을 white*/
+        color: white;
+      }
+      div &gt; span {
+        text-decoration: underline;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;span&gt;hello&lt;/span&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elt. Quod commodi et
+        sequi ipsam odi dolorem. &lt;span&gt;inside&lt;/span&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="" alt="13-5강의화면1" /></p><blockquote><p>p span { ~ }</p></blockquote><p>p를 부모로 가진 모든 span에 대해 스타일을 지정한다. 위의 코드에서 p 아래 자식 span은 하나이고 해당 글자색을 white로 설정</p><blockquote><p>div &gt; span { ~ }</p></blockquote><p>이렇게 코드를 작성하면 div 아래 자식 span들 중 바로 아래(밑) 자식의 span에게만 스타일을 지정</p><p><br /></p><p>아래 코드에서는 <strong>p+span { }</strong> 코드를 잘 살펴보자.</p><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      p span {
+        /*div p sapn 을써도 된다 = 원하는 만큼 부모를 앞에 나열해줘도 된다.*/
+        color: white;
+      }
+      p + span {
+        text-decoration: underline;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elt. Quod commodi et
+        sequi ipsam odi dolorem. &lt;span&gt;inside&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;span&gt;hello&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>!(3-15강의화면2)[]</p><blockquote><p>p + span { ~ }</p></blockquote><p>이 <strong>+</strong> 기호를 사용하면 <strong>p와 형제인 span</strong>에 대한 스타일 지정이 된다. 즉 위 의 코드에서는 p 자식인 span에 대해서는 스타일 지정이 되지 않는다. <strong>여기서 중요한건</strong> span이 p 바로 다음에 오는 형제이기 때문에 hello에 underline을 할 수 있다. span 과 p 사이에 다른 엘리먼트가 오면 hello에 underline을 하라는 코드는 실행되지 않는다.<strong>(span이 p의 바로 뒤에 오지 않기 때문)</strong> 이때 사용할 수 있는건 <strong>~</strong> 이며, 이와 관련해서는 아래 3.16에서 이어서 다룬다.</p><h1 id="316-pseudo-selector-part-two">3.16 Pseudo Selector part Two</h1><p>e.g. span과 p가 형제인데 바로 뒤에 오지 않을때 스타일 지정을 위해 쓸수 있는것 : <strong>p ~ span { }</strong></p><ul><li>p span { } : 부모(p)와 자식(span)<li>p &gt; span { } : 부모(p) 바로 밑의 자식(span)<li>p + span { } : p와 형제인 바로 다음에 오는 span<li>p ~ span { } : p와 형제인 span. 바로 다음에 오지 않아도 됨.<li>그 밖의 주요 Pesudo Selector - MDN <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">[링크]</a></ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      p span {
+        /*div p sapn 을써도 된다 = 원하는 만큼 부모를 앞에 나열해줘도 된다.*/
+        color: white;
+      }
+      p ~ span {
+        text-decoration: underline;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elt. Quod commodi et
+        sequi ipsam odi dolorem. &lt;span&gt;inside&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;address&gt;hi&lt;/address&gt;
+      &lt;span&gt;hello&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>!(3-16강의화면1)[]</p><p><br /></p><p><strong>Attribute Selector</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">[링크]</a></p><ul><li>id나 class를 일일이 지정하지 않고 attribute selector를 사용해서 지정할 수 있다.</ul><pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang="kr"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - my first website&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      input {
+        border: 1px solid wheat;
+      }
+      input:required {
+        border: 1px solid tomato;
+      }
+      input[type="password"] {
+        background-color: thistle;
+      }
+      input[placeholder~="name"] {
+        /* ~ 는 placeholder에 'name'을 포함한 모든 input을 지정한것 */
+        background-color: pink;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;form&gt;
+        &lt;input type="text" placeholder="First name" /&gt;
+        &lt;input type="text" placeholder="Last name" /&gt;
+        &lt;input type="password" placeholder="password" required /&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>!(3-16강의화면2)[]</p><h1 id="reference">Reference</h1><ul><li><a href="https://nomadcoders.co/kokoa-clone">노마드 코더 - 코코아톡 클론 코딩</a> [2020 UPDATE] LEARNIG HTML</ul></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/%EA%B0%9C%EB%B0%9C/'>개발</a>, <a href='/categories/%EC%BD%94%EC%BD%94%EC%95%84-%ED%81%B4%EB%A1%A0-%EC%BD%94%EB%94%A9/'>코코아 클론 코딩</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/css/" class="post-tag no-text-decoration" >css</a> <a href="/tags/clonecoding/" class="post-tag no-text-decoration" >clonecoding</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Learning CSS - part.2 - Noru&url=http://localhost:4000/posts/LEARNING-CSS-PART2/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Learning CSS - part.2 - Noru&u=http://localhost:4000/posts/LEARNING-CSS-PART2/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Learning CSS - part.2 - Noru&url=http://localhost:4000/posts/LEARNING-CSS-PART2/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/LEARNING-CSS-PART2/">Learning CSS - part.2</a><li><a href="/posts/LEARNING-CSS-PART1/">Learning CSS - part.1</a><li><a href="/posts/LEARNING-HTML/">Learning HTML</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/clonecoding/">clonecoding</a> <a class="post-tag" href="/tags/css/">css</a> <a class="post-tag" href="/tags/blog/">blog</a> <a class="post-tag" href="/tags/jekyll/">jekyll</a> <a class="post-tag" href="/tags/theme/">theme</a> <a class="post-tag" href="/tags/chirpy/">chirpy</a> <a class="post-tag" href="/tags/clone/">clone</a> <a class="post-tag" href="/tags/fork/">fork</a> <a class="post-tag" href="/tags/gitpage/">gitpage</a> <a class="post-tag" href="/tags/html/">html</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/LEARNING-CSS-PART1/"><div class="card-body"> <span class="timeago small" > Jan 12 <i class="unloaded">2021-01-12T21:30:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Learning CSS - part.1</h3><div class="text-muted small"><p> 3.0 How to Add CSS to HTML css를 html 페이지에 추가하는 방법은 두가지가 있다. 같은 html 파일에 html코드와 css코드를 함께 작성하는 방법 : head tag 안에 style tag를 작성하고, style tag안에 코드를 작성. html와 css파일을 분리해서 작성하는 방법. 여러곳에 css파일을 범용적...</p></div></div></a></div><div class="card"> <a href="/posts/LEARNING-CSS-PART3/"><div class="card-body"> <span class="timeago small" > Jan 12 <i class="unloaded">2021-01-12T21:30:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Learning CSS - part.3</h3><div class="text-muted small"><p> 3.17 States 크롬 개발자 도구에서 확인할 수 있는 가장 중요한 selector는 아래 화면에서 보이는 Force element state 이다. (active, focus, hover, visited, focus-within) active &lt;!DOCTYPE html&gt; &lt;html lang="kr"&gt; &lt;hea...</p></div></div></a></div><div class="card"> <a href="/posts/ADVANCED-CSS/"><div class="card-body"> <span class="timeago small" > Jan 13 <i class="unloaded">2021-01-13T23:00:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Adcanced CSS</h3><div class="text-muted small"><p> 4.0 Transitions Transition은 어떤 상태에서 다른 상태로의 “변화”를 애니메이션으로 만드는 방법 transition 이라는 속성은 state가 없는 요소에 붙어야 한다. 즉, 아래 코드를 기준으로 a:hover{ ~ } 가 아닌 a{ ~ }안에서 transition을 지정해야 한다. 만...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/LEARNING-CSS-PART1/" class="btn btn-outline-primary"><p>Learning CSS - part.1</p></a> <a href="/posts/LEARNING-CSS-PART3/" class="btn btn-outline-primary"><p>Learning CSS - part.3</p></a></div><div id="disqus" class="pt-2 pb-2"><p class="font-italic text-center text-muted small"> Comments powered by <a href="https://disqus.com/">Disqus</a>.</p></div><script src="/assets/js/lib/jquery.disqusloader.min.js"></script> <script> var options = { scriptUrl: '//norusemari.disqus.com/embed.js', disqusConfig: function() { this.page.url = 'http://localhost:4000/posts/LEARNING-CSS-PART2/'; this.page.identifier = '/posts/LEARNING-CSS-PART2/'; } }; $.disqusLoader('#disqus', options); </script></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://github.com/norusemari">norusemari</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy/" target="_blank" rel="noopener">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/clonecoding/">clonecoding</a> <a class="post-tag" href="/tags/css/">css</a> <a class="post-tag" href="/tags/blog/">blog</a> <a class="post-tag" href="/tags/jekyll/">jekyll</a> <a class="post-tag" href="/tags/theme/">theme</a> <a class="post-tag" href="/tags/chirpy/">chirpy</a> <a class="post-tag" href="/tags/clone/">clone</a> <a class="post-tag" href="/tags/fork/">fork</a> <a class="post-tag" href="/tags/gitpage/">gitpage</a> <a class="post-tag" href="/tags/html/">html</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="http://localhost:4000{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
